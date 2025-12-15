@@ -1248,6 +1248,203 @@
         .mb-2 { margin-bottom: 20px; }
         .mb-3 { margin-bottom: 30px; }
         .hidden { display: none !important; }
+
+        /* =========== GALLERY - FUTURISTIC STYLE =========== */
+.gallery {
+    background: var(--dark-light);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.gallery-item {
+    background: var(--dark);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 217, 255, 0.2);
+    animation: float 0.6s ease;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img img {
+    transform: scale(1.05);
+}
+
+.gallery-content {
+    padding: 20px;
+}
+
+.gallery-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gallery-content h3 i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.gallery-content p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========== TABLET STYLES (768px and up) =========== */
+@media (min-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .gallery-img {
+        height: 250px;
+    }
+}
+
+/* =========== DESKTOP STYLES (992px and up) =========== */
+@media (min-width: 992px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .gallery-img {
+        height: 200px;
+    }
+}
+
+/* =========== LARGE DESKTOP (1200px and up) =========== */
+@media (min-width: 1200px) {
+    .gallery-img {
+        height: 220px;
+    }
+}
+
+
+/* =========== GALLERY - FUTURISTIC STYLE =========== */
+.gallery {
+    background: var(--dark-light);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.gallery-item {
+    background: var(--dark);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 217, 255, 0.2);
+    animation: float 0.6s ease;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img img {
+    transform: scale(1.05);
+}
+
+.gallery-content {
+    padding: 20px;
+}
+
+.gallery-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gallery-content h3 i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.gallery-content p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========== TABLET STYLES (768px and up) =========== */
+@media (min-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .gallery-img {
+        height: 250px;
+    }
+}
+
+/* =========== DESKTOP STYLES (992px and up) =========== */
+@media (min-width: 992px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .gallery-img {
+        height: 200px;
+    }
+}
+
+/* =========== LARGE DESKTOP (1200px and up) =========== */
+@media (min-width: 1200px) {
+    .gallery-img {
+        height: 220px;
+    }
+}
     </style>
 </head>
 <body>
@@ -1270,6 +1467,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#directors">Directors</a></li>
                     <li><a href="#locations">Locations</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -1291,6 +1489,7 @@
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#directors">Directors</a></li>
                 <li><a href="#locations">Locations</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1305,9 +1504,9 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-badge"><i class="fas fa-atom"></i> Premium Dental Care Since 2003</span>
+                <span class="hero-badge"><i class="fas fa-atom"></i> Premium Dental Care Since 1988</span>
                 <h1>Transforming Smiles With Precision & Compassion</h1>
-                <p>Experience world-class dental treatments in a comfortable environment with cutting-edge technology and compassionate care for you and your family. Our 20+ years of expertise ensures your smile is in the best hands.</p>
+                <p>Experience world-class dental treatments in a comfortable environment with cutting-edge technology and compassionate care for you and your family. Our 35+ years of expertise ensures your smile is in the best hands.</p>
                 <div class="btn-container">
                     <a href="https://forms.gle/ZxCqfiCaGHMBL9S86" class="btn" target="_blank">
                         Book Appointment <i class="fas fa-arrow-right"></i>
@@ -1337,7 +1536,6 @@
                             <li>Dental Implant</li>
                             <li>Orthodontic Treatment</li>
                             <li>Correction of Irregular teeth</li>
-                            <li>Correction of Forwardity</li>
                             <li>Correction of Jaw Deformity</li>
                             <li>Treatment of Jaw Fractures</li>
                             <li>Cyst and tumors of jaws</li>
@@ -1353,7 +1551,7 @@
                     <div class="service-content">
                         <h3>Dental Facilities</h3>
                         <ul>
-                            <li>Total education and dental surgery</li>
+                            <li>Painless 3rd Molar Extraction</li>
                             <li>Fix crown & Bridge</li>
                             <li>Complete and Partial Denture</li>
                             <li>Dental X-Ray</li>
@@ -1384,7 +1582,7 @@
                 </div>
                 <div class="about-text">
                     <h3>Welcome to Dr. Roop Lal Sharma Dental Clinic</h3>
-                    <p>With over 20 years of dedicated service, our clinic has established itself as a trusted name in dental care. We combine expertise with cutting-edge technology to deliver exceptional results that transform smiles and lives.</p>
+                    <p>With over 35+ years of dedicated service, our clinic has established itself as a trusted name in dental care. We combine expertise with cutting-edge technology to deliver exceptional results that transform smiles and lives.</p>
                     <p>Our patient-centric approach ensures personalized treatment plans that address individual needs while maintaining the highest standards of dental excellence.</p>
                     
                     <div class="features">
@@ -1432,6 +1630,90 @@
             </div>
         </div>
     </section>
+
+    <!-- Gallery Section -->
+<section class="section gallery" id="gallery">
+    <div class="container">
+        <div class="section-title">
+            <h2>Clinic Gallery</h2>
+            <p>Take a virtual tour of our state-of-the-art dental facility</p>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <div class="gallery-img">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Modern Dental Clinic Interior" 
+                         loading="lazy">
+                </div>
+                <div class="gallery-content">
+                    <h3><i class="fas fa-clinic-medical"></i> Clinic Interior</h3>
+                    <p>Our modern, hygienic and comfortable treatment rooms equipped with advanced dental technology.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-img">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Advanced Dental Equipment" 
+                         loading="lazy">
+                </div>
+                <div class="gallery-content">
+                    <h3><i class="fas fa-microscope"></i> Advanced Equipment</h3>
+                    <p>Cutting-edge dental instruments and technology for precise and pain-free treatments.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-img">
+                    <img src="https://images.unsplash.com/photo-1550831106-0994fe8abcfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Sterilization Area" 
+                         loading="lazy">
+                </div>
+                <div class="gallery-content">
+                    <h3><i class="fas fa-shield-virus"></i> Sterilization Zone</h3>
+                    <p>Ultra-modern sterilization facility ensuring 100% infection-free environment.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-img">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Waiting Area" 
+                         loading="lazy">
+                </div>
+                <div class="gallery-content">
+                    <h3><i class="fas fa-couch"></i> Comfortable Waiting Area</h3>
+                    <p>Spacious and comfortable waiting lounge for patients and families.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-img">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Dental X-Ray Room" 
+                         loading="lazy">
+                </div>
+                <div class="gallery-content">
+                    <h3><i class="fas fa-x-ray"></i> Digital X-Ray Room</h3>
+                    <p>Advanced digital radiography for accurate diagnosis with minimal radiation.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-img">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Clinic Reception" 
+                         loading="lazy">
+                </div>
+                <div class="gallery-content">
+                    <h3><i class="fas fa-concierge-bell"></i> Reception Area</h3>
+                    <p>Friendly staff at reception to assist you with appointments and queries.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Directors Section -->
     <section class="section directors" id="directors">
@@ -1489,10 +1771,10 @@
             
             <div class="locations-grid">
                 <div class="location-card">
-                    <h3><i class="fas fa-map-marker-alt"></i> Suresh Sharma Nagar</h3>
+                    <h3><i class="fas fa-map-marker-alt"></i>Bareilly</h3>
                     <p>Dr. Roop Lal Sharma Dental Clinic</p>
-                    <p>Suresh Sharma Nagar, Bareilly</p>
-                    <p><strong>Timings:</strong> Mon-Sat: 9 AM - 7 PM | Sun: 10 AM - 2 PM</p>
+                    <p>BABA BANKHANDINATH TEMPLE <br>ROAD JOGINAWADA BAREILLY <br>LANDMARK: NEAR KHUSHI SWEETS , 243006</p>
+                    <p><strong>Timings:</strong> Mon-Sun: 9 AM - 2 PM | Thur: 4 PM - 9 PM (Evening) | <br><strong>Lunch Timing:</strong>: 2PM - 3PM</p>
                     <a href="https://maps.google.com/?q=Suresh+Sharma+Nagar+Bareilly" class="location-btn" target="_blank">
                         Get Directions <i class="fas fa-arrow-right"></i>
                     </a>
@@ -1502,7 +1784,7 @@
                     <h3><i class="fas fa-map-marker-alt"></i> Faridpur</h3>
                     <p>Dr. Roop Lal Sharma Dental Clinic</p>
                     <p>1 Statan Road, Opposite Lycium School</p>
-                    <p>Faridpur, Bareilly - 245583</p>
+                    <p>Faridpur, Bareilly - 243503</p>
                     <p><strong>Timings:</strong> Mon-Sat: 9 AM - 7 PM | Sun: 10 AM - 2 PM</p>
                     <a href="https://maps.google.com/?q=1+Statan+Road+Faridpur+Bareilly" class="location-btn" target="_blank">
                         Get Directions <i class="fas fa-arrow-right"></i>
@@ -1608,7 +1890,7 @@
             <div class="footer-container">
                 <div class="footer-col">
                     <h3>Dr. Roop Lal Sharma</h3>
-                    <p>Providing exceptional dental care with compassion and expertise for a healthier, brighter smile for over 20 years.</p>
+                    <p>Providing exceptional dental care with compassion and expertise for a healthier, brighter smile for over 35+ years.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1623,6 +1905,7 @@
                         <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
                         <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
                         <li><a href="#directors"><i class="fas fa-chevron-right"></i> Directors</a></li>
                         <li><a href="#locations"><i class="fas fa-chevron-right"></i> Locations</a></li>
                         <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
@@ -1654,7 +1937,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Dr. Roop Lal Sharma Dental Clinic. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for Healthy Smiles</p>
+                <p>&copy; 2026 Dr. Roop Lal Sharma Dental Clinic. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for Healthy Smiles</p>
             </div>
         </div>
     </footer>
