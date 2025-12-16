@@ -1445,6 +1445,35 @@
         height: 220px;
     }
 }
+
+
+
+/* Add this to your existing CSS */
+.director-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background: var(--dark-lighter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures image stays within circle */
+    border: 3px solid rgba(0, 217, 255, 0.2);
+}
+
+.director-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the circle properly */
+}
+
+/* Optional: Add hover effect for images */
+.director-card:hover .director-img {
+    border-color: var(--primary);
+    transform: scale(1.05);
+    transition: var(--transition);
+}
     </style>
 </head>
 <body>
@@ -1716,50 +1745,61 @@
 </section>
 
     <!-- Directors Section -->
-    <section class="section directors" id="directors">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Directors</h2>
-                <p>Meet our experienced dental professionals dedicated to your oral health</p>
+    <!-- Directors Section -->
+<section class="section directors" id="directors">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Directors</h2>
+            <p>Meet our experienced dental professionals dedicated to your oral health</p>
+        </div>
+        
+        <div class="directors-grid">
+            <!-- Director 1: Dr. Navratan Sharma -->
+            <div class="director-card">
+                <div class="director-img">
+                    <!-- Replace with your actual photo file name -->
+                    <img src="dr_navratan_sharma.jpg" 
+                         alt="Dr. Navratan Sharma - Director & Senior Dentist" 
+                         loading="lazy"
+                         onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-cog\'></i>'">
+                </div>
+                <h3>Dr. Navratan Sharma</h3>
+                <p>Director & Senior Dentist</p>
+                <p class="description">With over 25 years of experience in dental surgery and implants, Dr. Navratan Sharma specializes in complex dental procedures and has successfully treated thousands of patients.</p>
+                <div class="contact-info">
+                    <a href="tel:8171814672">
+                        <i class="fas fa-phone-alt"></i> 8171814672
+                    </a>
+                    <a href="mailto:drnavratan@drrooplalsharma.com">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                </div>
             </div>
             
-            <div class="directors-grid">
-                <div class="director-card">
-                    <div class="director-img">
-                        <i class="fas fa-user-cog"></i>
-                    </div>
-                    <h3>Dr. Navratan Sharma</h3>
-                    <p>Director & Senior Dentist</p>
-                    <p class="description">With over 25 years of experience in dental surgery and implants, Dr. Navratan Sharma specializes in complex dental procedures and has successfully treated thousands of patients.</p>
-                    <div class="contact-info">
-                        <a href="tel:8171814672">
-                            <i class="fas fa-phone-alt"></i> 8171814672
-                        </a>
-                        <a href="mailto:drnavratan@drrooplalsharma.com">
-                            <i class="fas fa-envelope"></i> Send Email
-                        </a>
-                    </div>
+            <!-- Director 2: Dr. Puneet Sharma -->
+            <div class="director-card">
+                <div class="director-img">
+                    <!-- Replace with your actual photo file name -->
+                    <img src="PUNEET.jpeg" 
+                         alt="Dr. Puneet Sharma - B.D.S., MIDA, BIU(IDS)" 
+                         loading="lazy"
+                         onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-cog\'></i>'">
                 </div>
-                
-                <div class="director-card">
-                    <div class="director-img">
-                        <i class="fas fa-user-cog"></i>
-                    </div>
-                    <h3>Dr. Puneet Sharma</h3>
-                    <p>Doctor B.D.S., MIDA, BIU(IDS)</p>
-                    <p class="description">A specialist in orthodontics and cosmetic dentistry, Dr. Puneet Sharma combines advanced techniques with an artistic eye to create beautiful, natural-looking smiles.</p>
-                    <div class="contact-info">
-                        <a href="tel:7017140747">
-                            <i class="fas fa-phone-alt"></i> 7017140747
-                        </a>
-                        <a href="mailto:drpuneet@drrooplalsharma.com">
-                            <i class="fas fa-envelope"></i> Send Email
-                        </a>
-                    </div>
+                <h3>Dr. Puneet Sharma</h3>
+                <p>Doctor B.D.S., MIDA, BIU(IDS)</p>
+                <p class="description">A specialist in orthodontics and cosmetic dentistry, Dr. Puneet Sharma combines advanced techniques with an artistic eye to create beautiful, natural-looking smiles.</p>
+                <div class="contact-info">
+                    <a href="tel:7017140747">
+                        <i class="fas fa-phone-alt"></i> 7017140747
+                    </a>
+                    <a href="mailto:drpuneet@drrooplalsharma.com">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Locations Section -->
     <section class="section locations" id="locations">
